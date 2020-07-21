@@ -158,10 +158,10 @@ class ProductData {
       String brand,
       String category,
       String variant,
-      String price,
-      String quantity,
+      num price,
+      int quantity,
       String coupon,
-      String position});
+      int position});
 }
 
 /// Represents information about an ecommerce related action that has taken place. It is referred to as an actionFieldObject.
