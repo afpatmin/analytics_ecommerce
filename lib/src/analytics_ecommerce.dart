@@ -1,9 +1,16 @@
+import 'dart:js';
+
 import '../analytics_ecommerce.dart';
 import 'interrop/data_layer.dart' as dl;
 import 'models.dart';
 
 class AnalyticsEcommerce {
   AnalyticsEcommerce();
+
+  /// Measure custom data
+  void customEvent(Map<String, dynamic> data) {
+    dl.push(JsObject.jsify(data));
+  }
 
   /// Measures product impressions and also tracks a standard
   /// pageview for the tag configuration.
