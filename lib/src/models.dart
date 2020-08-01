@@ -5,6 +5,18 @@ import 'package:js/js.dart';
 
 @JS()
 @anonymous
+abstract class CustomData {
+  external String get event;
+  external set event(String v);
+
+  external int get step;
+  external set step(int v);
+
+  external factory CustomData({String event, int step});
+}
+
+@JS()
+@anonymous
 abstract class EventData {
   external String get event;
   external set event(String v);
