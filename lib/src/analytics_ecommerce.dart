@@ -86,6 +86,7 @@ class AnalyticsEcommerce {
 
   void measurePurchase(ActionData actionField, List<ProductData> products) {
     dl.push(EventData(
+        event: 'purchase',
         ecommerce: EcommerceData(
             purchase:
                 PurchaseData(actionField: actionField, products: products))));
